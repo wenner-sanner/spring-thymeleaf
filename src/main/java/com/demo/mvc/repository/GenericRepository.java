@@ -1,4 +1,4 @@
-package com.demo.mvc.dao;
+package com.demo.mvc.repository;
 
 import java.io.Serializable;
 import java.lang.reflect.ParameterizedType;
@@ -8,7 +8,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 
-public abstract class AbstractDao<T, PK extends Serializable> {
+public abstract class GenericRepository<T, PK extends Serializable> {
 	
 	@SuppressWarnings("unchecked")
 	private final Class<T> entityClass = 
